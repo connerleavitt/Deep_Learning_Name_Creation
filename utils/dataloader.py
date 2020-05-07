@@ -42,6 +42,7 @@ class CharDataLoader:
         self.n_batches = len(self.text_list) // self.batch_size
         if len(self.text_list) % self.batch_size != 0:
             self.n_batches += 1
+        self.batch_num = 0
 
     def _text_to_ix(
         self, text: str, return_y: bool = True
